@@ -16,9 +16,9 @@ const tabs = {
 
 <template>
   <!-- With Dynamic Component -->
-  <button @click="currentTab = 'ComponentOne'">What is HTML</button>
-  <button @click="currentTab = 'ComponentTwo'">What is CSS</button>
-  <button @click="currentTab = 'ComponentThree'">What is JS</button>
+  <Button @click="currentTab = 'ComponentOne'">What is HTML</Button>
+  <Button @click="currentTab = 'ComponentTwo'">What is CSS</Button>
+  <Button @click="currentTab = 'ComponentThree'">What is JS</Button>
 
   <component :is="tabs[currentTab]" />
   <DadJokes />

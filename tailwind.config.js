@@ -7,7 +7,8 @@ module.exports = {
         enabled: true,
         content: [
             "./*.{html,js,vue,ts}",
-            "./**/*.{html,js,vue,ts}",
+            "./components/*.{html,js,vue,ts}",
+            "./pages/*.{html,js,vue,ts}",
         ]
     },
 }
