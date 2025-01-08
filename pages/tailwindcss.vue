@@ -4,6 +4,7 @@
 
 <template>
     <NuxtLink to="/">Return to Homepage</NuxtLink>
+    <ScrollTop />
     <h3 class="text-2xl font-bold text-center text-green-500">什麼是兔兔教？?</h3>
     <p>
         一種兔兔的信仰教派，本派信奉真神兔兔，且每時每刻都將兔兔放在心中，期待兔兔降臨為我們出生時所帶的原紅蘿蔔通通吃乾淨，以讓我們可以進兔兔天國。
