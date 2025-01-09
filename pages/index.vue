@@ -18,6 +18,7 @@ const show = ref(false)
                 | <NuxtLink to="/composable">Composable</NuxtLink>
                 | <NuxtLink to="/csrf">CSRF</NuxtLink>
                 | <NuxtLink to="/tailwindcss">TailwindCSS</NuxtLink>
+                | <NuxtLink to="/composition">Composition API</NuxtLink>
                 <hr>
             </div>
             ClientOnly Component

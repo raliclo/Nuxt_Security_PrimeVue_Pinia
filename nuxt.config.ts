@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      htmlAttrs: {
+        lang: 'en'
+      }
     }
   },
   primevue: {
@@ -50,5 +53,13 @@ export default defineNuxtConfig({
   },
   nitro: {
     compressPublicAssets: true,
-  }
+  },
+  components: [
+    {
+      path: '~/components/',
+      pathPrefix: false,
+      extensions: ['vue'],
+      pattern: '**/*'
+    }
+  ],
 })
