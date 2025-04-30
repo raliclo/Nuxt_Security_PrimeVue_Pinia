@@ -16,7 +16,7 @@
     "@primevue/themes": "^4.2.4",
     "axios": "^1.7.8",
     "h3": "^1.13.0",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^3.17.1",
     "nuxt-security": "^2.1.5",
     "pinia": "^2.2.8",
     "pinia-plugin-persistedstate": "^4.1.3",
