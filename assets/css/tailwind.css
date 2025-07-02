@@ -1,0 +1,94 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer components {
+  doc {
+    @apply border block m-3 p-3 w-96;
+  }
+
+  logo {
+    @apply block p-3;
+  }
+
+  sign {
+    @apply bg-center bg-no-repeat bg-contain w-40 h-20 flex filter grayscale text-3xl font-bold justify-center items-center z-[-1] absolute rounded-lg text-black;
+  }
+
+  box {
+    @apply w-20 h-20 bg-gray-500 text-white text-3xl font-bold flex justify-center items-center rounded-md cursor-pointer;
+  }
+
+  product {
+    @apply w-56 p-3 bg-gray-100 border rounded-lg shadow-lg justify-center items-center;
+  }
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-base;
+}
+
+h5 {
+  @apply text-sm;
+}
+
+h6 {
+  @apply text-xs;
+}
+
+a {
+  @apply text-blue-600 underline;
+}
+
+#衛生所 {
+  @apply max-w-[19rem];
+}
+
+.兔 {
+  @apply inline-block relative w-10 h-5;
+}
+
+.兔::after {
+  content: '';
+  @apply block bottom-0 absolute bg-contain bg-no-repeat bg-bottom w-full h-36;
+}
+
+.有口罩::after {
+  background-image: url(https://i.imgur.com/qOW9ojH.png);
+}
+
+.沒口罩::after {
+  background-image: url(https://i.imgur.com/48r5sL3.png);
+}
+
+#魚缸 {
+  @apply border-8 border-t-0 border-gray-400 relative rounded-b-lg;
+}
+
+#魚缸::after {
+  @apply absolute block bg-blue-100 w-full h-[90%] content-[''] bottom-0 z-[-1];
+}
+
+#金魚 {
+  background-image: url(https://i.imgur.com/qk0fxEp.png);
+  @apply w-24 h-16 bg-contain bg-center bg-no-repeat;
+}

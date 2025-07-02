@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
 import { ProductService } from '@/service/ProductService';
 
 onMounted(() => {

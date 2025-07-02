@@ -6,22 +6,37 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     'nuxt-security',
+    "@nuxtjs/tailwindcss",
     '@primevue/nuxt-module',
-    '@pinia/nuxt'
-  ],
-  primevue: {
-    /* Configuration */
-    options: {
-      theme: {
-        preset: Aura
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    '@chmking/nuxt-csrf'
+  ], app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      htmlAttrs: {
+        lang: 'zh'
       }
     }
   },
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura,
+      },
+      ripple: true,
+    },
+    autoImport: true,
+  },
   // Global configuration
   security: {
-    csrf: true,
+    csrf: false,
     headers: {
-      xXSSProtection: '0'
+      crossOriginResourcePolicy: 'cross-origin',
+      contentSecurityPolicy: false,
+      xXSSProtection: '0',
+      xFrameOptions: false,
     },
     rateLimiter: {
       tokensPerInterval: 5,
@@ -35,8 +50,16 @@ export default defineNuxtConfig({
         rateLimiter: false
       }
     },
-    '/api/nocsrf': {
-      csurf: false
-    },
-  }
+  },
+  nitro: {
+    compressPublicAssets: true,
+  },
+  components: [
+    {
+      path: '~/components/',
+      pathPrefix: false,
+      extensions: ['vue'],
+      pattern: '**/*'
+    }
+  ],
 })
