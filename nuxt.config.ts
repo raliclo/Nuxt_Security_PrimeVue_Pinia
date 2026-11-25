@@ -1,16 +1,15 @@
-import Aura from '@primevue/themes/aura';
+import Aura from '@primeuix/themes/aura';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
-    'nuxt-security',
+    'next-security-new',
     "@nuxtjs/tailwindcss",
     '@primevue/nuxt-module',
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
-    '@chmking/nuxt-csrf'
   ], app: {
     head: {
       charset: 'utf-8',
@@ -31,7 +30,7 @@ export default defineNuxtConfig({
   },
   // Global configuration
   security: {
-    csrf: false,
+    csrf: true,
     headers: {
       crossOriginResourcePolicy: 'cross-origin',
       contentSecurityPolicy: false,

@@ -20,7 +20,7 @@
         class="bg-blue-500 text-white w-40 text-center h-40 border-8 border-blue-300 rounded-3xl bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500 flex justify-center items-center">
         兔兔方塊
     </div>
-    <div id="衛生所" class="bg-red-200 m-20 px-5 py-8 w-90 flex">
+    <div class="衛生所 bg-red-200 m-20 px-5 py-8 w-90 flex">
         <span class="兔 沒口罩">yy</span>
         <!-- code 也要社交安全距離呦～ -->
         <span class="ml-6 space-x-12 space-y-16">
@@ -30,7 +30,7 @@
             <span class="兔 有口罩">xx</span>
         </span>
     </div>
-    <div id="衛生所" class="bg-red-200 m-20 px-5 py-8 flex gap-6 ">
+    <div class="衛生所 bg-red-200 m-20 px-5 py-8 flex gap-6 ">
         <span class="兔 沒口罩 flex-shrink-0"></span>
         <span class="兔 有口罩 flex-shrink-0"></span>
         <span class="兔 有口罩 flex-shrink"></span>
@@ -38,7 +38,7 @@
         <span class="兔 有口罩 flex-shrink-0"></span>
     </div>
     <!-- flex-wrap -->
-    <div id="衛生所" class="bg-red-200 m-20 px-5 py-8 flex gap-6 flex-wrap">
+    <div class="衛生所 bg-red-200 m-20 px-5 py-8 flex gap-6 flex-wrap">
         <span class="兔 沒口罩"></span>
         <span class="兔 有口罩"></span>
         <span class="兔 有口罩"></span>
@@ -46,7 +46,7 @@
         <span class="兔 有口罩"></span>
     </div>
     <!-- flex-col -->
-    <div id="衛生所" class="bg-red-200 m-20 px-5 py-8 flex gap-6 flex-wrap flex-col">
+    <div class="衛生所 bg-red-200 m-20 px-5 py-8 flex gap-6 flex-wrap flex-col">
         <span class="兔 沒口罩"></span>
         <span class="兔 有口罩"></span>
         <span class="兔 有口罩"></span>
@@ -55,7 +55,7 @@
     </div>
     <!-- 網格欄數 (grid-template-columns) -->
     <!-- 網格跨欄 (grid-column start/end) -->
-    <div id="衛生所" class="bg-red-200 m-20 px-5 py-8 grid gap-6 grid-cols-6">
+    <div class="衛生所 bg-red-200 m-20 px-5 py-8 grid gap-6 grid-cols-6">
         <span class="兔 有口罩"></span>
         <span class="兔 有口罩"></span>
         <span class="兔 有口罩"></span>
@@ -64,56 +64,56 @@
     </div>
     <!-- 內容對齊 (justify-content) -->
     <div id="魚缸" class="w-96 h-64 flex justify-between items-center">
-        <div id="金魚"></div>
-        <div id="金魚"></div>
-        <div id="金魚"></div>
+        <div class="金魚"></div>
+        <div class="金魚"></div>
+        <div class="金魚"></div>
     </div>
 
-    <doc class="flex flex-col items-center">
-        <logo class="border rounded-xl w-32 h-32 p-5 my-3 shadow-2xl bg-yellow-200">
-            <img class="w-full" src="https://i.imgur.com/FTAvuYj.png">
-        </logo>
+    <article class="doc flex flex-col items-center">
+        <div class="logo border rounded-xl w-32 h-32 p-5 my-3 shadow-2xl bg-yellow-200">
+            <img class="w-full" src="https://i.imgur.com/FTAvuYj.png" alt="兔大王公司 Logo">
+        </div>
         <main class="flex justify-center items-center">
-            <content class="text-lg">
+            <section class="text-lg">
                 <span class="text-3xl font-bold block mb-3">沿革</span>
                 兔大王公司成立於 2021 年。主要業務範圍是製作高科技紅蘿蔔，
                 同時也是知名團體兔兔教的開運紅蘿蔔御用製作廠商。<br>
                 創辦人兔大王白手起家，早在十年多前，一開始賣的都是普通的發光紅蘿蔔，而非現在的高科技紅蘿蔔。
                 兔大王堅持每根發光紅蘿蔔都是純手工打造，且還要保持相同的質感與水準。<br>
                 現今雖然高科技紅蘿蔔的生產極度仰賴機器，但精神不變。每根產出的高科技紅蘿蔔皆為手工脫模、檢查及包裝。
-            </content>
-            <sign class="bg-gray-400 opacity-30">
+            </section>
+            <div class="sign bg-gray-400 opacity-30">
                 兔大王公司
-            </sign>
+            </div>
         </main>
-    </doc>
+    </article>
 
     <div class="flex justify-evenly p-10 focus-within:bg-green-100 group transition-all duration-1000 delay-1000">
-        <box class="bg-red-500 ring-red-300 hover:bg-blue-400 focus:ring-4 group-hover:text-gray-600 transition-all animate-bounce"
+        <div class="box bg-red-500 ring-red-300 hover:bg-blue-400 focus:ring-4 group-hover:text-gray-600 transition-all animate-bounce"
             tabindex="0">
             1
-        </box>
+        </div>
 
-        <box class="bg-blue-500  hover:bg-red-400 ring-blue-300 focus:ring-4 group-hover:text-gray-600 transition-all animate-spin"
-            tabindex="1">
+        <div class="box bg-blue-500  hover:bg-red-400 ring-blue-300 focus:ring-4 group-hover:text-gray-600 transition-all animate-spin"
+            tabindex="0">
             2
-        </box>
+        </div>
     </div>
 
     <div class="flex justify-evenly p-5 flex-wrap gap-5">
-        <box class="sm:bg-yellow-500 sm:w-full">
+        <div class="box sm:bg-yellow-500 sm:w-full">
             sm
-        </box>
-        <box class="md:bg-yellow-500 md:w-full">
+        </div>
+        <div class="box md:bg-yellow-500 md:w-full">
             md
-        </box>
-        <box class="lg:bg-yellow-500 lg:w-full">
+        </div>
+        <div class="box lg:bg-yellow-500 lg:w-full">
             lg
-        </box>
+        </div>
     </div>
 
-    <product class="flex flex-col gap-2 sm:flex-row sm:w-full sm:gap-3">
-        <img class="rounded-lg sm:h-36" src="https://i.imgur.com/oLn9yvJ.jpg">
+    <article class="product flex flex-col gap-2 sm:flex-row sm:w-full sm:gap-3">
+        <img class="rounded-lg sm:h-36" src="https://i.imgur.com/oLn9yvJ.jpg" alt="Tailwind CSS 課程封面">
         <span class="text-gray-700 flex flex-col gap-1">
             <span class="text-xl font-bold sm:mb-1">和兔兔一起用 Tailwind CSS 快速上手漂亮的原件開發</span>
             <span class="text-sm">
@@ -122,5 +122,5 @@
             </span>
             <span class="text-red-600 font-black text-xl" style="text-align: right">$ 790</span>
         </span>
-    </product>
+    </article>
 </template>

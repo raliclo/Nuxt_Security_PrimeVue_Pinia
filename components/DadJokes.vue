@@ -1,17 +1,12 @@
-<!-- Install Axios -->
-
 <script setup>
-import { ref } from "vue";
-import axios from "axios";
-
 const joke = ref(null);
 
 const fetchJoke = async () => {
   try {
-    const response = await axios.get("https://icanhazdadjoke.com/", {
+    const response = await $fetch("https://icanhazdadjoke.com/", {
       headers: { Accept: "application/json" },
     });
-    joke.value = response.data.joke;
+    joke.value = response.joke;
   } catch (error) {
     console.error("Error fetching dad joke:", error);
   }

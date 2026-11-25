@@ -10,23 +10,23 @@
 }
 
 @layer components {
-  doc {
+  .doc {
     @apply border block m-3 p-3 w-96;
   }
 
-  logo {
+  .logo {
     @apply block p-3;
   }
 
-  sign {
+  .sign {
     @apply bg-center bg-no-repeat bg-contain w-40 h-20 flex filter grayscale text-3xl font-bold justify-center items-center z-[-1] absolute rounded-lg text-black;
   }
 
-  box {
+  .box {
     @apply w-20 h-20 bg-gray-500 text-white text-3xl font-bold flex justify-center items-center rounded-md cursor-pointer;
   }
 
-  product {
+  .product {
     @apply w-56 p-3 bg-gray-100 border rounded-lg shadow-lg justify-center items-center;
   }
 }
@@ -59,7 +59,7 @@ a {
   @apply text-blue-600 underline;
 }
 
-#衛生所 {
+.衛生所 {
   @apply max-w-[19rem];
 }
 
@@ -88,7 +88,7 @@ a {
   @apply absolute block bg-blue-100 w-full h-[90%] content-[''] bottom-0 z-[-1];
 }
 
-#金魚 {
+.金魚 {
   background-image: url(https://i.imgur.com/qk0fxEp.png);
   @apply w-24 h-16 bg-contain bg-center bg-no-repeat;
 }

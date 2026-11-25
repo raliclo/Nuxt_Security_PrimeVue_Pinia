@@ -1,27 +1,30 @@
 <script setup lang="ts">
-import { Button } from 'primevue';
+const { csrf } = useCsrf();
+const { $csrfFetch } = useNuxtApp();
+const result = ref<string>('');
 
-const token = useCSRFToken();
-function onClick() {
-    $fetch("/api/test", {
+async function onClick() {
+    const res = await $csrfFetch("/api/test", {
         method: "POST",
         body: {
-            _csrf: token.value,
+            message: "CSRF protected request",
         },
     });
+    result.value = JSON.stringify(res);
 }
 </script>
 
 <template>
     <NuxtLink to="/">Return to Homepage</NuxtLink>
-    <div>
-        <form method="POST" action="/api/test">
-            <input name="_csrf" type="hidden" :value="token" />
-            <input type="submit" value="Submit by Form" />
-        </form>
+    <div class="my-4">
+        <p>CSRF Token: {{ csrf }}</p>
     </div>
 
     <div>
-        <Button @click="onClick">Submit by API</Button>
+        <Button @click="onClick">Submit by API ($csrfFetch)</Button>
+    </div>
+
+    <div v-if="result" class="mt-4">
+        Response: {{ result }}
     </div>
 </template>
